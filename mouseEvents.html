@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mouse Events</title>
+    <link rel="stylesheet" href="mEvents.css">
 </head>
 
 <body>
@@ -18,6 +19,30 @@
             <li>mouseleave()</li>
         </ul>
     </div>
+    <script src="jquery.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#box").click(function () {
+                $("#box").css('background-color', 'yellow')
+            });
+
+            $("#box").dblclick(function () {
+                $("#box").css('background-color', 'red')
+            });
+
+            $("#box").contextmenu(function () {
+                $("#box").css('background-color', 'green')
+            });
+
+            $("#box").mouseenter(function () {
+                $("#box").css('background-color', 'pink')
+            });
+
+            $("#box").mouseleave(function () {
+                $("#box").css('width', '400px')
+            });
+        });
+    </script>
 </body>
 
 </html>
