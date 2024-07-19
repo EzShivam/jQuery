@@ -1,0 +1,19 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#box {
+    background-color: violet;
+}
+
+.test {
+    height: 200px;
+    max-width: 100vmin;
+}
