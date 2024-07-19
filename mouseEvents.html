@@ -22,6 +22,8 @@
     <script src="jquery.js"></script>
     <script>
         $(document).ready(function () {
+            // this are the mouse Events
+
             $("#box").click(function () {
                 $("#box").css('background-color', 'yellow')
             });
@@ -40,6 +42,16 @@
 
             $("#box").mouseleave(function () {
                 $("#box").css('width', '400px')
+            });
+
+            // this is the code for the keyboard events
+
+            $('body').keypress(function () {
+                $(this).css("background-color", "green")
+            });
+
+            $('body').keyup(function () {
+                $(this).css("background-color", "aqua")
             });
         });
     </script>
