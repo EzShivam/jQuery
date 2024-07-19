@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Events</title>
+    <style>
+        #box {
+            height: 20px;
+            width: 200px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>Diiferent Form Events Are-</h3>
+    <ul>
+        <li>focus()</li>
+        <li>blur()</li>
+        <li>change()</li>
+        <li>select()</li>
+        <li>submit()</li>
+    </ul>
+    <form id="sform">
+        <label>Name-</label><input type="text" id="sname"><br><br>
+        <label for="">Class-</label><input type="text" id="sclass"><br><br>
+        <label for="">Country-</label><select id="scountry">
+            <option value="india">INDIA</option>
+            <option value="usa">USA</option>
+            <option value="canada">CANADA</option>
+            <option value="singapore">Singapore</option>
+            <option value="malesia">Malesia</option>
+
+        </select><br><br>
+        <input type="submit"><br><br>
+
+        <div id="box"></div>
+    </form>
+    <script src="jquery.js"></script>
+    <script src="formEvents.js"></script>
+
+</body>
+
+</html>
