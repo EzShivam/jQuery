@@ -8,6 +8,8 @@ $(document).ready(function () {
         $(this).css("color", "white")
     });
 
+    
+
     $(window).resize(function () {
         $("body").css("background-color", "")
     });
