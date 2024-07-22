@@ -22,6 +22,13 @@
         .color {
             color: white;
         }
+
+        .formClass {
+            height: min-content;
+            width: 400px;
+            border: 2px solid black;
+            background: cornflowerblue;
+        }
     </style>
 </head>
 
@@ -45,7 +52,13 @@
             <label>Phone-</label><input type="text" id="sphn"><br><br>
             <input type="submit">
         </form>
-    </div>
+    </div><br><br>
+    <button id="addClassBtn">Add Class</button>
+    <button id="rmvClassBtn">Remove Class</button>
+    <button id="tglClassBtn">Toggle Class</button>
+
+    <!-- jquery code starts from here -->
+
     <script src="jquery.js"></script>
     <script>
         $(document).ready(function () {
@@ -54,20 +67,41 @@
                 var a = $("#box h3").text();
                 console.log(a);
                 $("#box ul li:even").text("get set methods");
-                $("#box ul li:odd").html("<b>get set methods</b>")
-                $("#box").attr("class", "color")
+                $("#box ul li:odd").html("<b>get set methods</b>");
+                $("#box").attr("class", "color");
 
-                $("#sform").submit(function () {
-                    var name = $("#sname").val();
-                    var email = $("#semail").val();
-                    var phone = $("#sphn").val();
 
-                    alert(`Name : ${name} Email : ${email} Phone : ${phone}`)
-
-                });
 
             });
+
+            $("#sform").submit(function () {
+                var name = $("#sname").val();
+                var email = $("#semail").val();
+                var phone = $("#sphn").val();
+
+                alert(`Name : ${name} Email : ${email} Phone : ${phone}`);
+
+            });
+
         });
+
+        //adding the jquery for the cass class methods
+        //there are three class methods are present
+        //1.addClass() 2.removeClass 3.toggleClass
+
+        $("#addClassBtn").click(function () {
+            $("#formBox").addClass("formClass");
+        });
+
+        $("#rmvClassBtn").click(function () {
+            $("#formBox").removeClass("formClass");
+        });
+
+        $("#tglClassBtn").click(function () {
+            $("#formBox").toggleClass("formClass");
+        })
+
+
 
     </script>
 </body>
