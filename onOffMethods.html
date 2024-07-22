@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>On() Off() Methods</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-self: center;
+            flex-direction: column;
+        }
+
+        #box {
+            border: 1px solid black;
+            height: max-content;
+            width: max-content;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>These are the On() Off() Methods</h2>
+    <div id="box">
+        <h3>ON()</h3>
+        <p>This method is used to add multiple events for a single element.</p><br>
+        <h3>OFF()</h3>
+        <p>This method is used to rempve multiple events for a single element.</p>
+    </div><br><br>
+    <button id="removeBtn">Off</button>
+
+    <!-- adding the scripts  -->
+
+    <script src="jquery.js"></script>
+    <script>
+        $(document).ready(function () {
+
+            //on() method code
+            $("#box").on({
+                "click": function () {
+                    $(this).css("background", "orange");
+                },
+
+                "mouseout": function () {
+                    $(this).css("background", "green");
+                },
+
+                "mouseover": function () {
+                    $(this).css("background", "red");
+                }
+            })
+
+            //off() method code
+            $("#removeBtn").click(function () {
+                $("#box").off("mouseout mouseover")
+            })
+
+
+
+        });
+    </script>
+
+</body>
+
+</html>

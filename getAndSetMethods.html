@@ -53,6 +53,7 @@
             <input type="submit">
         </form>
     </div><br><br>
+    <button id="addCss">Add-inline-Css</button><br>
     <button id="addClassBtn">Add Class</button>
     <button id="rmvClassBtn">Remove Class</button>
     <button id="tglClassBtn">Toggle Class</button>
@@ -99,6 +100,12 @@
 
         $("#tglClassBtn").click(function () {
             $("#formBox").toggleClass("formClass");
+        })
+
+
+        //jquery css() method is used to add the inline css for the element.
+        $("#addCss").click(function () {
+            $("#formBox").css({ "background": "green", "color": "red" });
         })
 
 
