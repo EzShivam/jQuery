@@ -9,7 +9,7 @@ $(document).ready(function () {
 
     $("#scountry").change(function () {
         var a = $(this).val(); //store the value of country in a.
-        $("#box").html(a); //set the value of a to box.
+        $("#box").text(a); //set the value of a to box.
     });
 
     $("#sname, #sclass, #scountry").select(function () {
