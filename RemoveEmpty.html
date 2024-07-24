@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remove And Empty Methods</title>
+    <style>
+        #box {
+            border: 1px solid black;
+            background: red;
+            height: 100px;
+            width: 80%;
+        }
+
+        #box * {
+            padding: 0 20px 0 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>The remove() and empty() methods. </h2>
+    <div id="box">
+        <p>Empty()-This method is used to delete all(selected) the inner elements of selected element</p>
+        <p>Remove()-This method is used to delete the selected element itself.</p>
+    </div><br>
+    <button id="emptyBtn">Empty()</button>
+    <button id="removeBtn">Remove()</button>
+
+    <!-- adding the required jquery -->
+    <script src="jquery.js"></script>
+
+    <!-- implementing the logic i.e. actual script -->
+
+    <script>
+        $(document).ready(function () {
+
+            //empty()
+            $("#emptyBtn").click(function () {
+                $("#box").empty();
+            });
+
+            //remove()
+            $("#removeBtn").click(function () {
+                $("#box").remove();
+            });
+        });
+    </script>
+</body>
+
+</html>
