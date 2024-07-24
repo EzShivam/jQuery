@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Append And Prepend</title>
+    <style>
+        #box {
+            border: 1px solid black;
+            background: red;
+        }
+
+        #box * {
+            padding: 0 20px 0 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>The append(), after(), prepend() and before() methods. </h2>
+    <div id="box">
+        <p>the append() method is used to add the new entry at the end of the given element.</p>
+        <p>the prepend() method is used to add the new entry at the start of the given element.</p>
+        <p>the after() method is used to add the new entry after the given element.</p>
+        <p>the before() method is used to add the new entry before the given element.</p>
+    </div><br>
+    <!-- <ol>
+        <li>B-Ball</li>
+        <li>C-Cat</li>
+        <li>D-Dog</li>
+    </ol><br> -->
+    <button id="appendBtn">Append</button>
+    <button id="prependBtn">Prepend</button>
+
+    <script src="jquery.js"></script>
+
+    <!-- jquery code -->
+    <script>
+        $(document).ready(function () {
+
+            // append the given <h2> to the box
+            $("#appendBtn").click(function () {
+                $("#box").append("<h2>Jquery Tutorial</h2>")
+            });
+
+            //after() - add the given element after the div box
+            $("#appendBtn").click(function () {
+                $("#box").after("<h2>After() - My Jquery</h2>")
+            });
+
+            //before() - add the given element before the div box
+            $("#prependBtn").click(function () {
+                $("#box").before("<h2>Before() - My Jquery</h2>")
+            });
+
+            //prepend the given <h2> to the box
+            $("#prependBtn").click(function () {
+                $("#box").prepend("<h2>Append And Prepend</h2>")
+            });
+
+            // $("#appendBtn").click(function () {
+            //     $('ol').append("<li>E-Elephant</li>")
+            // });
+
+            // $("#prependBtn").click(function () {
+            //     $('ol').prepend("<li>A-Apple</li>")
+            // });
+        })
+    </script>
+
+</body>
+
+</html>
