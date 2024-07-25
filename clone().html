@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clone method</title>
+    <style>
+        .box {
+            height: 150px;
+            width: 50%;
+            border: 2px solid black;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #cloneDiv {
+            height: 150px;
+            width: 50%;
+            margin-top: 20px;
+            border: 2px solid red;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Jquery Clone Method</h2>
+    <div class="box">
+        <h2>Use for cloning purpose</h2>
+        <p>clone method is used to copy the given element and paste it to the destination.</p>
+    </div>
+    <div id="cloneDiv">
+        <p>This is the destination</p>
+    </div>
+    <button id="cloneBtn">Clone</button>
+    <script src="jquery.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#cloneBtn").click(function () {
+                $(".box h2").clone().prependTo("#cloneDiv");
+                $("#cloneDiv p").css("display", "none");
+                $(".box p").clone().appendTo("#cloneDiv");
+            });
+        })
+    </script>
+</body>
+
+</html>
