@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Replace and Replace All</title>
+    <style>
+        #box {
+            height: 200px;
+            width: 30%;
+            border: 1px solid black;
+            padding-left: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>replace() and replaceAll() methods</h2>
+    <div id="box">
+        <h2>The paragraphs</h2>
+        <p>This is heading one</p>
+        <p>This is heading one</p>
+        <p>This is heading one</p>
+    </div><br>
+    <button id="replBtn">Replace</button>
+    <button id="replAllBtn">ReplaceAll</button>
+
+    <script src="jquery.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#replBtn").click(function () {
+                $("#box p:first").replaceWith("This is the new replaced p.");
+            });
+
+            $("#replAllBtn").click(function () {
+                $("<p> This are the replace all p's</P>").replaceAll("#box p")
+            })
+        });
+    </script>
+</body>
+
+</html>

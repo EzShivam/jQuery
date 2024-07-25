@@ -43,6 +43,8 @@
     <script>
         $(document).ready(function () {
             $("#cloneBtn").click(function () {
+
+                //cloning and the prepending the h2 to cloneDiv.
                 $(".box h2").clone().prependTo("#cloneDiv");
                 $("#cloneDiv p").css("display", "none");
                 $(".box p").clone().appendTo("#cloneDiv");
