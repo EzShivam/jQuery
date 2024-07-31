@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wrap Unwrap</title>
+    <style>
+        #box {
+            background-color: black;
+            color: white
+        }
+    </style>
+</head>
+
+<body>
+    <h2>The Wrap and unwrap method</h2>
+    <div id="box">
+        <h2>Learning Jquery</h2>
+        <p>Hi, My name is shikhare shivam and currently i'm learning jquery to upskill my knowledge. before learning
+            this jquery i learnt html css javascript</p>
+    </div><br>
+    <button id="wrapBtn">Wrap</button>
+    <button id="unWrapBtn">Unwrap</button>
+    <script src="jquery.js"></script>
+    <script>
+        $(document).ready(function () {
+
+            //wrap() is used to enclose the given tag inside the specific tag to made the parent child relation.
+            $("#wrapBtn").click(function () {
+                $("#box p").wrap("<h4></h4>");
+            });
+
+            //unwrap() is used to remove the current parent of the given tag and we don't specify any tag inside the parenthesis as it will implicitly removes the current parent.
+            $("#unWrapBtn").click(function () {
+                $("#box p").unwrap();
+            });
+        });
+    </script>
+</body>
+
+</html>
