@@ -10,6 +10,11 @@
             background-color: black;
             color: white
         }
+
+        #test {
+            color: blue;
+            background-color: yellow;
+        }
     </style>
 </head>
 
@@ -19,8 +24,12 @@
         <h2>Learning Jquery</h2>
         <p>Hi, My name is shikhare shivam and currently i'm learning jquery to upskill my knowledge. before learning
             this jquery i learnt html css javascript</p>
-    </div><br>
+    </div>
+    <p class="wrapAll">This is the para one to which i want to apply the wrapAll mehtod</p>
+    <p class="wrapAll">This is the para second to which i want to apply the wrapAll mehtod</p>
     <button id="wrapBtn">Wrap</button>
+    <button id="wrapAllBtn">WrapAll</button>
+    <button id="wrapInnerBtn">WrapInner</button>
     <button id="unWrapBtn">Unwrap</button>
     <script src="jquery.js"></script>
     <script>
@@ -34,6 +43,16 @@
             //unwrap() is used to remove the current parent of the given tag and we don't specify any tag inside the parenthesis as it will implicitly removes the current parent.
             $("#unWrapBtn").click(function () {
                 $("#box p").unwrap();
+            });
+
+            //wrapall() will apply the given wrap logic to all the tags that are mentioned
+            $("#wrapAllBtn").click(function () {
+                $(".wrapAll").wrapAll("<div id='test'> </div>");
+            });
+
+            //wrapinner() method works similarly as the wrap but the main difference is that it applies the wrapping from inner side. i.e. the applied tag becomes child to the present tag.
+            $("#wrapInnerBtn").click(function () {
+                $("h2").wrapInner("<i></i>");
             });
         });
     </script>
