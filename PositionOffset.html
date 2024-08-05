@@ -9,6 +9,7 @@
         .box {
             border: 2px solid brown;
             background-color: aquamarine;
+            position: relative;
         }
     </style>
 </head>
@@ -23,6 +24,7 @@
     </div><br>
     <button id="posBtn">Positon</button>
     <button id="offBtn">Offset</button>
+    <button id="setPosBtn">Set Position</button>
     <script src="jquery.js"></script>
     <script>
         $(document).ready(function () {
@@ -36,6 +38,22 @@
             $("#offBtn").click(function () {
                 console.log("the offset=", $(".box").offset());
             });
+
+            //finding the position for the h2 of box
+            $("#posBtn").click(function () {
+                let posh2 = $(".box h2").position();
+                console.log(posh2);
+            })
+
+            $("#offBtn").click(function () {
+                console.log("the offset=", $(".box h2").offset());
+            });
+
+            //setting the position
+            $("#setPosBtn").click(function () {
+                $(".box").offset({ top: 0, left: 0 });
+            })
+
         });
     </script>
 </body>
