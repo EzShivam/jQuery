@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery</title>
+</head>
+<style>
+    body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    #test {
+        height: 300px;
+        width: 400px;
+        background-color: aquamarine;
+        border: 2px double black;
+    }
+</style>
+
+<body>
+    <h1>Jquery hide(), show() and toggle() methods.</h1>
+    <div id="test">
+        <h1>The test</h1>
+        <p>the hide() method is used to apply display:none and the show method works exactly opposite to it i.e. it
+            shows the hidden element as it was. The toggle method is used to perform both the task on the single button.
+            this methods takes two arguments 1.time duration 2.callback function which will get executed when the task
+            is done.
+        </p>
+    </div>
+    <br>
+    <div class="button">
+        <button id="hideBtn">Hide</button>
+        <button id="showBtn">Show</button>
+        <button id="toggleBtn">Toggle</button>
+    </div>
+    <script src="jquery.js"></script>
+    <script>
+        $(document).ready(function () {
+
+            //the hide() method
+            $("#hideBtn").click(function () {
+                $("#test").hide(2000);//hide will take 2s
+            });
+
+            //the show() method
+            $("#showBtn").click(function () {
+                $("#test").show(2000);//hide will take 2s
+            });
+
+            //toggle()
+            $("#toggleBtn").click(function () {
+                $("#test").toggle(2000, function () {
+                    console.log("Hide show game.")
+                });//hide will take 2s
+            });
+
+        });
+    </script>
+</body>
+
+</html>
