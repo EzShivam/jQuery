@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fadeIn fadeOut FadeToggle</title>
+    <style>
+        body {
+            margin: 20px;
+            padding: 0;
+        }
+
+        #box {
+            height: 200px;
+            width: 30rem;
+            background-color: aqua;
+            border: 2px solid black;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Jquery fadeIn, fadeOut, fadeToggle methods</h1>
+    <div id="box">
+        <h2>Test box</h2>
+        <p>The jquery fadeOut method is used to hide the given element with the fade effect. The jquery fadeIn method is
+            used to show the given element with the fade effect. The jquery fadeToggle method is used to do both the
+            above task in one function. The jquery fadeTo method is used to define the fade Effect i.e when till the
+            given element should be faded.</p>
+    </div><br>
+    <button id="fadeOutBtn">FadeOut</button>
+    <button id="fadeInBtn">FadeIn</button>
+    <button id="fadeTglBtn">FadeToggle</button>
+    <button id="fadeToBtn">FadeTo</button>
+    <script src="jquery.js"> </script>
+    <script>
+        $(document).ready(function () {
+            //fadeOut
+            $("#fadeOutBtn").click(function () {
+                $("#box").fadeOut(3000);
+                //fadeOut(duration,callback)
+            });
+
+            //fadeIn
+            $("#fadeInBtn").click(function () {
+                $("#box").fadeIn(3000);
+                //fadeIn(duration,callback)
+            });
+
+            //fadeToggle
+            $("#fadeTglBtn").click(function () {
+                $("#box").fadeToggle(3000);
+                //fadeToggle(duration,callback)
+            });
+
+            //fadeTo
+            $("#fadeToBtn").click(function () {
+                $("#box").fadeTo(3000, 0.5);
+                //fadeTo(duration,opacity,callback)
+            });
+        });
+    </script>
+</body>
+
+</html>
