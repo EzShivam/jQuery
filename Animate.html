@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animate Methods</title>
+</head>
+<style>
+    #box {
+        height: 200px;
+        width: 30rem;
+        background-color: aqua;
+        margin: 20px;
+        padding: 20px;
+    }
+</style>
+
+<body>
+    <h1>Jquery Animate Method</h1>
+    <div id="box">
+        <h2>Test Box</h2>
+        <p>The jquery animate() method is used to apply some interesting animations to the selected element. this method
+            will take three parameters as animate({params},duration,callback).</p>
+    </div>
+    <br><Button id="animateBtn">Animate</Button>
+    <script src="jquery.js"></script>
+    <script>
+        $(document).ready(function () {
+            //animate function
+            $("#animateBtn").click(function () {
+                $("#box").animate({
+                    width: "70rem"
+                }, 3000)
+            })
+        })
+    </script>
+</body>
+
+</html>
