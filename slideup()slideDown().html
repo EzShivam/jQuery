@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SlideUp SlideDown</title>
+</head>
+<style>
+    #box {
+        height: 200px;
+        width: 30rem;
+        background: aqua;
+        padding: 10px;
+        border: 2px solid black;
+    }
+</style>
+
+<body>
+    <h1>Jquery Slide up and Slide down methods</h1>
+    <div id="box">
+        <h2>The Test Box</h2>
+        <p>The slideUp() mehtod will hide the given element with the hide effect.The slideDown() method show the given
+            hidden element with the slide effect. the toggleSlide() will do both the tasks alternatively.</p>
+    </div><br>
+    <button id="slideUpBtn">slideUp</button>
+    <button id="slideDownBtn">slideDown</button>
+    <button id="slideTglBtn">slideToggle</button>
+
+    <!-- script -->
+    <script src="jquery.js"></script>
+    <script>
+        $(document).ready(function () {
+
+            //slideUp
+            $("#slideUpBtn").click(function () {
+                $("#box").slideUp(3000);
+                //slideUp(duration,callback)
+            });
+
+            //slideDown
+            $("#slideDownBtn").click(function () {
+                $("#box").slideDown(3000);
+                //slideDown(duration,callback)
+            });
+
+            //slideToggle
+            $("#slideTglBtn").click(function () {
+                $("#box").slideToggle(5000);
+                //slideToggle(duration,callback)
+            });
+        });
+    </script>
+</body>
+
+</html>
