@@ -29,9 +29,25 @@
         $(document).ready(function () {
             //animate function
             $("#animateBtn").click(function () {
+                // $("#box").animate({
+                //     marginLeft: "40rem",
+                //     marginTop: "10rem"
+                // })
+                //the above animate function will apply the marginTop and marginLeft property at the same time.
+
+                //if we want to apply the effects one after one then we have to define the animate function one after one as
                 $("#box").animate({
-                    width: "70rem"
-                }, 3000)
+                    marginLeft: "40rem"
+                })
+                $("#box").animate({
+                    marginTop: "10rem"
+                })
+                $("#box").animate({
+                    marginTop: ""
+                })
+                $("#box").animate({
+                    marginLeft: ""
+                })
             })
         })
     </script>
