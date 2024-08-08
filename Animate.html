@@ -5,16 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Animate Methods</title>
+    <style>
+        #box {
+            height: 200px;
+            width: 30rem;
+            background-color: aqua;
+            margin: 20px;
+            padding: 20px;
+        }
+    </style>
 </head>
-<style>
-    #box {
-        height: 200px;
-        width: 30rem;
-        background-color: aqua;
-        margin: 20px;
-        padding: 20px;
-    }
-</style>
 
 <body>
     <h1>Jquery Animate Method</h1>
@@ -38,7 +38,13 @@
                 //if we want to apply the effects one after one then we have to define the animate function one after one as
                 $("#box").animate({
                     marginLeft: "40rem"
-                })
+                }, 3300)
+                $("#box").animate({
+                    backgroundColor: "red",
+                    color: "black"
+                }, 3300)
+                //the above animate effect will not apper because the animate effect doesn't support backgrond color and color properties.
+                
                 $("#box").animate({
                     marginTop: "10rem"
                 })
