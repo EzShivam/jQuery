@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stop Method</title>
+    <style>
+        #box {
+            height: 200px;
+            width: 200px;
+            background-color: green;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Jquery stop method</h1>
+    <div id="box"></div><br>
+    <button id="animateBtn">Animate</button>
+    <button id="stopBtn">Stop</button>
+
+    <script src="jquery.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#animateBtn").click(function () {
+                $("#box").animate({ marginLeft: "400px" }, 4000);
+            })
+        })
+
+        //code to stop the animation at some point
+        $("#stopBtn").click(function () {
+            $("#box").stop(true, true);
+        })
+
+        //the stop(true,true) function can have two arguments the first true is for the stopping all the applied animations and the second one is for the stopping the element at the finish point.
+    </script>
+
+</body>
+
+</html>
